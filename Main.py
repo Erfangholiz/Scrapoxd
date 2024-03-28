@@ -2,7 +2,6 @@ import requests
 import re
 from bs4 import BeautifulSoup
 import lxml
-import msvcrt
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
@@ -55,7 +54,6 @@ Enter url: '''
             exit()
         print('Added up | ' + str(sum / 60) + ' Hours')
     else:
-        return 'Error ' + str(response.status_code)
+        print('Error ' + str(response.status_code))
 
 main()
-msvcrt.getch()
